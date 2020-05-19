@@ -1,0 +1,327 @@
+<style type="text/css">
+
+/*分别定义HTML中和标记之的距离样式*/
+
+html, body, h1, form, fieldset, legend, ol, li {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+/*定义<body>标记样式*/
+
+body {
+
+    background: #E0E0E0;
+
+    color: #111111;
+
+    font-family: Microsoft YaHei;
+
+    padding-left: 20px;
+
+
+
+}
+
+/*定义付费内容的样式*/
+
+form#payment {
+
+    background: #E0E0E0;
+
+    -webkit-border-radius: 5px;
+
+    border-radius: 5px;
+
+    padding: 20px;
+
+    width: 500px;
+
+    margin:left;
+
+}
+
+form#payment fieldset {
+
+    border: none;
+
+    margin-bottom: 10px;
+
+}
+
+form#payment fieldset:last-of-type { margin-bottom: 0; }
+
+form#payment legend {
+
+    color: #000000;
+
+    font-size: 16px;
+
+   # font-weight: bold;
+
+    padding-bottom: 10px;
+
+    text-shadow: 0 1px 1px #000000;
+
+}
+
+form#payment > fieldset > legend:before {
+
+    content: "Step " counter(fieldsets+1) ": ";
+
+    counter-increment: fieldsets;
+
+}
+
+form#payment fieldset fieldset legend {
+
+    color: #111111;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    padding-bottom: 0;
+
+}
+
+form#payment ol li {
+
+    background: #b9cf6a;
+
+    background: rgba(255, 255, 255, .3);
+
+    border-color: #e3ebc3;
+
+    border-color: rgba(255, 255, 255, .6);
+
+    border-style: solid;
+
+    border-width: 2px;
+
+    -webkit-border-radius: 5px;
+
+    line-height: 30px;
+
+    list-style: none;
+
+    padding: 5px 10px;
+
+    margin-bottom: 2px;
+
+}
+
+form#payment ol ol li {
+
+    background: none;
+
+    border: none;
+
+    float: left;
+
+}
+
+form#payment label {
+
+    float: left;
+
+    font-size: 13px;
+
+    width: 110px;
+
+}
+
+form#payment fieldset fieldset label {
+
+    background: none no-repeat left 50%;
+
+    line-height: 20px;
+
+    padding: 0 0 0 30px;
+
+    width: auto;
+
+}
+
+form#payment fieldset fieldset label:hover { cursor: pointer; }
+
+form#payment input:not([type=radio]), form#payment textarea {
+
+    background: #ffffff;
+
+    border: #FC3 solid 1px;
+
+    -webkit-border-radius: 3px;
+
+    font: Microsoft YaHei;
+
+    outline: none;
+
+    padding: 5px;
+
+    width: 335px;
+
+}
+
+form#payment input:not([type=submit]):focus, form#payment textarea:focus {
+
+    background: #eaeaea;
+
+    border: #F00 solid 1px;
+
+}
+
+form#payment input[type=radio] {
+
+    float: left;
+
+    margin-right: 5px;
+
+}
+
+</style>
+
+
+<form id="payment" method="get" action="/saveUser">
+{% csrf_token %}
+    <fieldset>
+
+        <legend>1.用户详细信息</legend>
+
+        <ol>
+
+
+             <li>
+
+                <label for="email">公司名称：</label>
+
+                <input  name="company_name" type="text" placeholder="公司名称" required autofocus>
+
+            </li>
+
+            <li>
+
+                <label for="email">数据库公网地址：</label>
+
+                <input  name="rds_public" type="text" placeholder="数据库公网地址" required autofocus>
+
+            </li>
+
+            <li>
+
+                <label for="email">数据库内网地址：</label>
+
+                <input  name="rds_inet" type="text" placeholder="数据库内网地址" required>
+
+            </li>
+
+            <li>
+
+                <label for="email">数据库密码：</label>
+
+                <input  name="rds_pass" type="text" placeholder="数据库密码" required>
+
+            </li>
+
+            <li>
+
+                <label for="email">collector内网IP：</label>
+
+                <input  name="collector_inet_ip" type="text" placeholder="采集器内网IP" required>
+
+            </li>
+
+            <li>
+
+                <label for="email">collector公网IP：</label>
+
+                <input  name="collector_public_ip" type="text" placeholder="采集器公网IP" required>
+
+            </li>
+
+            <li>
+
+                <label for="email">cloud内网IP：</label>
+
+                <input  name="cloud_inet_ip" type="text" placeholder="cloud内网IP" required>
+
+            </li>
+
+            <li>
+
+                <label for="email">cloud公网IP：</label>
+
+                <input  name="cloud_public_ip" type="text" placeholder="cloud公网IP" required>
+
+            </li>
+
+            <li>
+
+                <label for="email">cloud_startkey：</label>
+
+                <input  name="cloud_key" type="text" placeholder="cloud_startkey" required>
+
+            </li>
+
+            <li>
+
+                <label for="email">auu_startkey：</label>
+
+                <input  name="auu_key" type="text" placeholder="auu_startkey" required>
+
+            </li>
+
+            <li>
+
+                <label for="email">dfg_startkey：</label>
+
+                <input  name="dfg_key" type="text" placeholder="dfg_startkey" required>
+
+            </li>
+            <li>
+
+                <label for="email">百度AK：</label>
+
+                <input  name="baidu_ak" type="text" placeholder="baiduAK" required>
+
+            </li>
+            <li>
+
+                <label for="email">百度服务ID：</label>
+
+                <input  name="baidu_serviceid" type="text" placeholder="baiduid" required>
+
+            </li>
+            <li>
+
+                <label for="email">平台名称：</label>
+
+                <input  name="ptname" type="text" placeholder="平台名称" required>
+
+            </li>
+            <li>
+
+                <label for="email">cloud_ip加密串：</label>
+
+                <input  name="aesencode" type="text" placeholder="aseEncode" required>
+
+            </li>
+
+        </ol>
+
+    </fieldset>
+
+
+
+
+
+    <fieldset>
+
+        <center><input type="submit" value="添加"></center>
+
+    </fieldset>
+
+</form>

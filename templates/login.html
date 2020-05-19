@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Login</title>
+
+</head>
+
+<body>
+
+   <form action="/login" method="get">
+
+      {% csrf_token %}
+
+      <p>
+
+          <label>用户名</label>
+
+          <input name="username" type="text">
+
+      </p>
+
+      <p>
+
+          <label>密码</label>
+
+          <input name="passwd" type="password">
+
+          <input type="submit" value="登录" >
+
+          <span style="color: red;">{{err_msg }}</span>
+
+      </p>
+
+  </form>
+
+ </body>

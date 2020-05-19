@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 3px;
+	margin-top: 0px;
+	margin-right: 3px;
+	margin-bottom: 0px;
+}
+.STYLE1 {
+	color: #e1e2e3;
+	font-size: 12px;
+}
+.STYLE6 {color: #000000; font-size: 12px; }
+.STYLE10 {color: #000000; font-size: 12px; }
+.STYLE19 {
+	color: #344b50;
+	font-size: 12px;
+}
+.STYLE21 {
+	font-size: 12px;
+	color: #3b6375;
+}
+.STYLE22 {
+	font-size: 12px;
+	color: #295568;
+}
+-->
+</style>
+
+
+
+</head>
+
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="6%" height="19" valign="bottom"><div align="center"></div></td>
+                <td width="94%" valign="bottom"><span class="STYLE1">管理人员基本信息列表</span></td>
+              </tr>
+            </table></td>
+
+
+
+
+
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="2000px" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+      <tr>
+{#        <td width="4%" height="20" bgcolor="d3eaef" class="STYLE10"><div align="center">#}
+{#          <input type="checkbox" name="checkbox" id="checkbox" />#}
+{#        </div></td>#}
+          <td width="30px" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">ID</span></div></td>
+          <td width="30px" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">平台名称</span></div></td>
+        <td width="30px" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">公司名称</span></div></td>
+
+        <td width="12%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">数据库公网IP</span></div></td>
+        <td width="12%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">数据库内网IP</span></div></td>
+{#        <td width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">数据库密码</span></div></td>#}
+        <td width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">采集器内网IP</span></div></td>
+        <td width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">采集器公网IP</span></div></td>
+		<td width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">cloud内网IP</span></div></td>
+		<td width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">cloud公网IP</span></div></td>
+{#		<td width="8%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">cloud_key</span></div></td>#}
+{#		<td width="8%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">auu_key</span></div></td>#}
+{#		<td width="8%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">dfg_key</span></div></td>#}
+		<td width="10%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">百度AK</span></div></td>
+		<td width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">百度服务ID</span></div></td>
+          <td width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">操作</span></div></td>
+
+      </tr>
+        <tbody>
+        {% for row in ls %}
+            <tr>
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.id }}</div></td>
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.ptname }}</div></td>
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.company_name }}</div></td>
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.rds_public }}</div></td>
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.rds_inet }}</div></td>
+{#                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.rds_pass }}</div></td>#}
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.collector_inet_ip }}</div></td>
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.collector_public_ip }}</div></td>
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.cloud_inet_ip }}</div></td>
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.cloud_public_ip }}</div></td>
+{#                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.cloud_key }}</div></td>#}
+{#                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.auu_key }}</div></td>#}
+{#                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.dfg_key }}</div></td>#}
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.baidu_ak }}</div></td>
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.baidu_serviceid }}</div></td>
+
+{#                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{{ row.aesencode }}</div></td>#}
+
+                <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center"><a href="/deleteUser?id={{ row.id }}" onClick="return confirm('确认要删除？')">删除</a> | <a href="/editUser?id={{ row.id }}">编辑</a></div></td>
+
+
+
+
+
+            </tr>
+        {% endfor %}
+    </tbody>
+
+    </table></td>
+  </tr>
+
+</table>
+<a href="/useradd">添加</a>
+</body>
+
+
+</html>
