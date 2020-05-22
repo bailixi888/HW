@@ -39,6 +39,7 @@ def saveUser(request):
 def deleteUser(request):
     id = request.GET.get('id')
     User.objects.filter(id=id).delete()
+
     return redirect("/queryUsers")
 
 
@@ -46,7 +47,10 @@ def deleteUser(request):
 def editUser(request):
     id = request.GET.get('id')
     thisuser = User.objects.filter(id=id).first()
+
     context = {"user":thisuser}
+    print(id)
+
     return render(request, "editUser.html",context)
 
 
@@ -87,5 +91,13 @@ def login(request):
         return render(request, "login.html")
 
 def fabu(request):
-	os.system('sh /data/mk.sh')
-	return render(request, "login.html")
+        id = request.GET.get('id')
+        thisuseruu = User.objects.filter(id=id).first()
+
+        context = {"user": thisuseruu}
+        print(id)
+
+
+        # os.system('sh /data/mk.sh "rds_pass"')
+
+        return render(request, "sure.html",context)

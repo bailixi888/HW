@@ -189,7 +189,7 @@ form#payment input[type=radio] {
 {% csrf_token %}
     <fieldset>
 
-        <legend>1.用户详细信息</legend>
+        <legend>确认信息</legend>
 
         <ol>
             <li>
@@ -204,7 +204,7 @@ form#payment input[type=radio] {
 
                 <label for="email">公司名称：</label>
 
-                <input  name="company_name" type="text" value="{{ user.company_name }}" required autofocus>
+                <input  name="company_name" type="text" value="{{ user.company_name }}" required autofocus disabled>
 
             </li>
 
@@ -212,7 +212,7 @@ form#payment input[type=radio] {
 
                 <label for="email">数据库公网地址：</label>
 
-                <input  name="rds_public" type="text" value="{{ user.rds_public }}" required autofocus>
+                <input  name="rds_public" type="text" value="{{ user.rds_public }}" required autofocus disabled>
 
             </li>
 
@@ -220,7 +220,7 @@ form#payment input[type=radio] {
 
                 <label for="email">数据库内网地址：</label>
 
-                <input  name="rds_inet" type="text" value="{{ user.rds_inet }}" required>
+                <input  name="rds_inet" type="text" value="{{ user.rds_inet }}" required disabled>
 
             </li>
 
@@ -228,7 +228,7 @@ form#payment input[type=radio] {
 
                 <label for="email">数据库密码：</label>
 
-                <input  name="rds_pass" type="text" value="{{ user.rds_pass }}" required>
+                <input  name="rds_pass" type="text" value="{{ user.rds_pass }}" required disabled>
 
             </li>
 
@@ -236,7 +236,7 @@ form#payment input[type=radio] {
 
                 <label for="email">collector内网IP：</label>
 
-                <input  name="collector_inet_ip" type="text" value="{{ user.collector_inet_ip }}" required>
+                <input  name="collector_inet_ip" type="text" value="{{ user.collector_inet_ip }}" required disabled>
 
             </li>
 
@@ -244,7 +244,7 @@ form#payment input[type=radio] {
 
                 <label for="email">collector公网IP：</label>
 
-                <input  name="collector_public_ip" type="text" value="{{ user.collector_public_ip }}" required>
+                <input  name="collector_public_ip" type="text" value="{{ user.collector_public_ip }}" required disabled>
 
             </li>
 
@@ -252,7 +252,7 @@ form#payment input[type=radio] {
 
                 <label for="email">cloud内网IP：</label>
 
-                <input  name="cloud_inet_ip" type="text" value="{{ user.cloud_inet_ip }}" required>
+                <input  name="cloud_inet_ip" type="text" value="{{ user.cloud_inet_ip }}" required disabled>
 
             </li>
 
@@ -260,7 +260,7 @@ form#payment input[type=radio] {
 
                 <label for="email">cloud公网IP：</label>
 
-                <input  name="cloud_public_ip" type="text" value="{{ user.cloud_public_ip }}" required>
+                <input  name="cloud_public_ip" type="text" value="{{ user.cloud_public_ip }}" required disabled>
 
             </li>
 
@@ -268,7 +268,7 @@ form#payment input[type=radio] {
 
                 <label for="email">cloud_startkey：</label>
 
-                <input  name="cloud_key" type="text" value="{{ user.cloud_key }}" required>
+                <input  name="cloud_key" type="text" value="{{ user.cloud_key }}" required disabled>
 
             </li>
 
@@ -276,7 +276,7 @@ form#payment input[type=radio] {
 
                 <label for="email">auu_startkey：</label>
 
-                <input  name="auu_key" type="text" value="{{ user.auu_key }}" required>
+                <input  name="auu_key" type="text" value="{{ user.auu_key }}" required disabled>
 
             </li>
 
@@ -284,35 +284,35 @@ form#payment input[type=radio] {
 
                 <label for="email">dfg_startkey：</label>
 
-                <input  name="dfg_key" type="text" value="{{ user.dfg_key }}" required>
+                <input  name="dfg_key" type="text" value="{{ user.dfg_key }}" required disabled>
 
             </li>
             <li>
 
                 <label for="email">百度AK：</label>
 
-                <input  name="baidu_ak" type="text" value="{{ user.baidu_ak }}" required>
+                <input  name="baidu_ak" type="text" value="{{ user.baidu_ak }}" required disabled>
 
             </li>
             <li>
 
                 <label for="email">百度服务ID：</label>
 
-                <input  name="baidu_serviceid" type="text" value="{{ user.baidu_serviceid }}" required>
+                <input  name="baidu_serviceid" type="text" value="{{ user.baidu_serviceid }}" required disabled>
 
             </li>
             <li>
 
                 <label for="email">平台名称：</label>
 
-                <input  name="ptname" type="text" value="{{ user.ptname }}" required>
+                <input  name="ptname" type="text" value="{{ user.ptname }}" required disabled>
 
             </li>
             <li>
 
                 <label for="email">cloud_ip加密串：</label>
 
-                <input  name="aesencode" type="text" value="{{ user.aesencode }}" required>
+                <input  name="aesencode" type="text" value="{{ user.aesencode }}" required disabled>
 
             </li>
 
@@ -326,7 +326,7 @@ form#payment input[type=radio] {
 
     <fieldset>
 
-        <center><input type="submit" value="修改" ></center>
+        <center><input type="submit" value="确认信息无误→发布" ></center>
 
     </fieldset>
 
