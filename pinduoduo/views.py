@@ -71,6 +71,7 @@ def updateUser(request):
     baidu_serviceid = request.GET.get('baidu_serviceid')
     ptname = request.GET.get('ptname')
     aesencode = request.GET.get('aesencode')
+    print(rds_pass)
     User.objects.filter(id=id).update(company_name=company_name, rds_public=rds_public,rds_inet=rds_inet,rds_pass=rds_pass,collector_inet_ip=collector_inet_ip,collector_public_ip=collector_public_ip,cloud_inet_ip=cloud_inet_ip,cloud_public_ip=cloud_public_ip,cloud_key=cloud_key,auu_key=auu_key,dfg_key=dfg_key,baidu_ak=baidu_ak,baidu_serviceid=baidu_serviceid,ptname=ptname,aesencode=aesencode)
 
     return redirect("/queryUsers")
@@ -90,14 +91,29 @@ def login(request):
         # err_msg = "账号或密码错误"
         return render(request, "login.html")
 
-def fabu(request):
+def sureinfo(request):
         id = request.GET.get('id')
         thisuseruu = User.objects.filter(id=id).first()
-
-        context = {"user": thisuseruu}
-        print(id)
-
-
+        contexts = {"user": thisuseruu}
         # os.system('sh /data/mk.sh "rds_pass"')
+        return render(request, "sure.html", contexts)
 
-        return render(request, "sure.html",context)
+def devops(request):
+        id = request.GET.get('id')
+        company_name = request.GET.get('company_name')
+        rds_public = request.GET.get('rds_public')
+        rds_inet = request.GET.get('rds_inet')
+        rds_pass = request.GET.get('rds_pass')
+        collector_inet_ip = request.GET.get('collector_inet_ip')
+        collector_public_ip = request.GET.get('collector_public_ip')
+        cloud_inet_ip = request.GET.get('cloud_inet_ip')
+        cloud_public_ip = request.GET.get('cloud_public_ip')
+        cloud_key = request.GET.get('cloud_key')
+        auu_key = request.GET.get('auu_key')
+        dfg_key = request.GET.get('dfg_key')
+        baidu_ak = request.GET.get('baidu_ak')
+        baidu_serviceid = request.GET.get('baidu_serviceid')
+        ptname = request.GET.get('ptname')
+        aesencode = request.GET.get('aesencode')
+        os.system('sh /data/mk.sh "rds_pass"')
+        return redirect("/queryUsers")

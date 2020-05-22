@@ -25,5 +25,6 @@ urlpatterns = [
     path('editUser/', views.editUser),
     path('updateUser/', views.updateUser),
     path('login/', views.login),
-    path('fabu/', views.fabu),
+    path('sureinfo/', views.sureinfo),
+    path('devops/', views.devops),
 ]

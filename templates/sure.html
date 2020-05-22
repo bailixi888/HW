@@ -185,7 +185,7 @@ form#payment input[type=radio] {
 </style>
 
 
-<form id="payment" method="get" action="/updateUser">
+<form id="payment" method="get" action="/devops">
 {% csrf_token %}
     <fieldset>
 
@@ -228,7 +228,7 @@ form#payment input[type=radio] {
 
                 <label for="email">数据库密码：</label>
 
-                <input  name="rds_pass" type="text" value="{{ user.rds_pass }}" required disabled>
+                <input  name="rds_pass" type="text" value="{{ user.rds_pass }}" required>
 
             </li>
 
