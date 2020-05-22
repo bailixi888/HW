@@ -1,6 +1,8 @@
+from django.forms import model_to_dict
 from django.shortcuts import render, redirect
 from pinduoduo.models import User
 from pinduoduo.models import Sys_user
+import os
 # Create your views here.
 #查询用户信息
 def queryUsers(request):
@@ -74,18 +76,16 @@ def login(request):
         username = request.GET.get('username')
         pwd = request.GET.get('passwd')
         alluser = Sys_user.objects.all()
+        for user in alluser:
+            if username == user.username and pwd == user.password and user.is_delete ==0:
 
-        print(type(u))
-        num = 0
-        for user in u:
-            if username == u.get('username') and pwd == u.get('password'):
-                # print("登录成功")
-                # print('user=' + username, 'pwd=' + pwd)
-
+                print("登录成功")
+                print('user=' + username, 'pwd=' + pwd)
                 return redirect("/queryUsers")
 
-            else:
+        # err_msg = "账号或密码错误"
+        return render(request, "login.html")
 
-                # print('user='+username,'pwd='+pwd)
-                err_msg = "账号或密码错误"
-                return render(request, "login.html")
+def fabu(request):
+	os.system('sh /data/mk.sh')
+	return render(request, "login.html")
