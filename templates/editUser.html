@@ -188,7 +188,7 @@ form#payment input[type=radio] {
 <form id="payment" method="get" action="/updateUser">
 {% csrf_token %}
     <fieldset>
-        <legend>1.用户详细信息</legend>
+        <legend>修改用户信息</legend>
         <ol>
 
                 <input  name="id" type="hidden" value="{{ user.id }}" required autofocus>
@@ -321,7 +321,7 @@ form#payment input[type=radio] {
 
     <fieldset>
 
-        <center><input type="submit" value="修改" ></center>
+        <center><input type="submit" value="确认修改" ></center>
 
     </fieldset>
 

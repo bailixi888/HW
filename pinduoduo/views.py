@@ -12,6 +12,16 @@ def queryUsers(request):
     context = {"ls":us}
     return render(request, "user.html", context)
 
+def userinfo(request):
+    # 到数据库查询用户信息
+    us = User.objects.all()
+    # 将数据发送到页面
+    context = {"ls": us}
+    return render(request, "userinfo.html", context)
+
+
+
+
 def openAdd(request):
     return render(request, "userAdd.html")
 
@@ -74,7 +84,7 @@ def updateUser(request):
     print(rds_pass)
     User.objects.filter(id=id).update(company_name=company_name, rds_public=rds_public,rds_inet=rds_inet,rds_pass=rds_pass,collector_inet_ip=collector_inet_ip,collector_public_ip=collector_public_ip,cloud_inet_ip=cloud_inet_ip,cloud_public_ip=cloud_public_ip,cloud_key=cloud_key,auu_key=auu_key,dfg_key=dfg_key,baidu_ak=baidu_ak,baidu_serviceid=baidu_serviceid,ptname=ptname,aesencode=aesencode)
 
-    return redirect("/queryUsers")
+    return redirect("/userinfo")
 
 def login(request):
         err_msg=''
@@ -118,4 +128,4 @@ def devops(request):
         os.system('sh /data/mk.sh "rds_pass"')
         print(os.system('sh /data/mk.sh "rds_pass"'))
         print(rds_pass)
-        return redirect("/queryUsers")
+        return redirect("/userinfo")
