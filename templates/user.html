@@ -46,7 +46,7 @@ a { color: inherit;
 text-decoration: none;
 
 }
-.STYLE33 {
+#STYLE33 {
 	margin-top:-233px;
 	left:0;
     color: #000000;
@@ -62,10 +62,19 @@ text-decoration: none;
     width: 1200px;
     background-color:#87CEFA;
 }
+.STYLE35 {
+    width: 180px;
+    height: 45px;
+
+}
+
 li {
 line-height: 40px;
 list-style-type:none;
 
+}
+.STYLE35:hover{
+    background-color: #eaeaea;
 }
 -->
 </style>
@@ -177,21 +186,22 @@ list-style-type:none;
 
 </table>
 
-<div class="STYLE33">
+<div id="STYLE33">
     <ul>
-        <li><a href="http://www.w3school.com.cn/tags/tag_iframe.asp" target="iframe_a">w3c school</a></li>
-        <li><a href="https://www.baidu.com/index.php?tn=monline_3_dg" target="iframe_a">百度</a></li>
-        <li><a href="https://www.cnblogs.com/" target="iframe_a">博客园</a></li>
-        <li><a href="http://www.ximalaya.com/explore/" target="iframe_a">喜马拉雅</a></li>
-        <li><a href="https://jx.tmall.com/?ali_trackid=2:mm_28347190_2425761_27186547:1503727807_3k9_233309614" target="iframe_a">天猫</a></li>
-        <li><a href="http://www.ctrip.com/?allianceid=1381&sid=1068414" target="iframe_a">携程</a></li>
+        <div class="STYLE35"><li><a href="http://www.w3school.com.cn/tags/tag_iframe.asp" target="iframe_a">信息管理</a></li></div>
+
+        <div class="STYLE35"><li><a href="https://www.cnblogs.com/" target="iframe_a">发布管理</a></li></div>
+
+
     </ul>
 </div>
 
- <div id="page_content">
-          <iframe id="menuFrame" name="menuFrame" src="user.html" style="overflow:visible;" scrolling="yes" frameborder="no" width="100%" height="100%; float:left">
-             </iframe>
- </div>
+{# <div id="page_content">#}
+{#          <iframe id="menuFrame" name="menuFrame" src="user.html" style="overflow:visible;" scrolling="yes" frameborder="no" width="100%" height="100%; float:left">#}
+{#             </iframe>#}
+{# </div>#}
+
+
 </body>
 
 
