@@ -37,7 +37,7 @@ body {
     margin-right: 10px
 }
 .STYLE31 {
-    margin-top: 5px
+    margin-top: 7px
 }
 .STYLE32 {
     color: #1E90FF;
@@ -47,13 +47,14 @@ text-decoration: none;
 
 }
 #STYLE33 {
-	margin-top:-233px;
+	margin-top:-220px;
 	left:0;
     color: #000000;
     height:0;
     padding-bottom: 45%;
     width: 10%;
     background-color:#F0F8FF;
+    text-align: center;
 }
 .STYLE34 {
     border: 3px;
@@ -63,7 +64,7 @@ text-decoration: none;
     background-color:#87CEFA;
 }
 .STYLE35 {
-    width: 180px;
+    width: 100%;
     height: 45px;
 
 }
@@ -75,6 +76,7 @@ list-style-type:none;
 }
 .STYLE35:hover{
     background-color: #eaeaea;
+    text-align:center;
 }
 -->
 </style>
@@ -123,6 +125,9 @@ list-style-type:none;
 {#	</li>#}
 {#</ul>#}
 {#  </td>#}
+
+  <div id="page_content">
+          <iframe id="menuFrame" name="menuFrame" src="user.html" style="overflow:visible;" scrolling="yes" frameborder="no" width="100%" height="100%; float:left">
 
     <td><table width="89%" border="0" cellpadding="0" cellspacing="1" bgcolor="#f0f0f0" align="right" class="STYLE31">
     <div class="STYLE34">
@@ -181,25 +186,24 @@ list-style-type:none;
         {% endfor %}
     </tbody>
 
-    </table></td>
+    </table></td>            </iframe>
+ </div>
   </tr>
 
 </table>
 
 <div id="STYLE33">
-    <ul>
-        <div class="STYLE35"><li><a href="http://www.w3school.com.cn/tags/tag_iframe.asp" target="iframe_a">信息管理</a></li></div>
+        <div class="STYLE35"><li><a href="" target="iframe_a">用户列表</a></li></div>
+        <div class="STYLE35"><li><a href="" target="iframe_a">添加用户</a></li></div>
 
-        <div class="STYLE35"><li><a href="https://www.cnblogs.com/" target="iframe_a">发布管理</a></li></div>
+        <div class="STYLE35"><li><a href="" target="iframe_a">已发布</a></li></div>
+        <div class="STYLE35"><li><a href="" target="iframe_a">未发布</a></li></div>
+        <div class="STYLE35"><li><a href="/login" target="iframe_a">退出</a></li></div>
 
 
-    </ul>
 </div>
 
-{# <div id="page_content">#}
-{#          <iframe id="menuFrame" name="menuFrame" src="user.html" style="overflow:visible;" scrolling="yes" frameborder="no" width="100%" height="100%; float:left">#}
-{#             </iframe>#}
-{# </div>#}
+
 
 
 </body>
