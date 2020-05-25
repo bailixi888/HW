@@ -116,4 +116,6 @@ def devops(request):
         ptname = request.GET.get('ptname')
         aesencode = request.GET.get('aesencode')
         os.system('sh /data/mk.sh "rds_pass"')
+        print(os.system('sh /data/mk.sh "rds_pass"'))
+        print(rds_pass)
         return redirect("/queryUsers")
