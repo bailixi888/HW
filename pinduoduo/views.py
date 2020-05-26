@@ -44,7 +44,7 @@ def saveUser(request):
     aesencode = request.GET.get('aesencode')
 
     User.objects.create(company_name=company_name, rds_public=rds_public,rds_inet=rds_inet,rds_pass=rds_pass,collector_inet_ip=collector_inet_ip,collector_public_ip=collector_public_ip,cloud_inet_ip=cloud_inet_ip,cloud_public_ip=cloud_public_ip,cloud_key=cloud_key,auu_key=auu_key,dfg_key=dfg_key,baidu_ak=baidu_ak,baidu_serviceid=baidu_serviceid,ptname=ptname,aesencode=aesencode)
-    return redirect("/queryUsers")
+    return redirect("/userinfo")
 
 def deleteUser(request):
     id = request.GET.get('id')
@@ -125,7 +125,5 @@ def devops(request):
         baidu_serviceid = request.GET.get('baidu_serviceid')
         ptname = request.GET.get('ptname')
         aesencode = request.GET.get('aesencode')
-        os.system('sh /data/mk.sh "rds_pass"')
-        print(os.system('sh /data/mk.sh "rds_pass"'))
-        print(rds_pass)
+        os.system('sh /data/mk.sh' + ' ' + rds_public + ' ' + rds_inet + ' ' + rds_pass + ' ' + collector_inet_ip + ' ' + collector_public_ip + ' ' + cloud_inet_ip + ' ' + cloud_public_ip + ' ' + cloud_key + ' ' + auu_key + ' ' + dfg_key + ' ' + baidu_ak + ' ' + baidu_serviceid + ' ' + ptname + ' ' + aesencode)
         return redirect("/userinfo")
