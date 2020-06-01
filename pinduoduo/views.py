@@ -127,3 +127,4 @@ def devops(request):
         aesencode = request.GET.get('aesencode')
         os.system('sh /data/mk.sh' + ' ' + rds_public + ' ' + rds_inet + ' ' + rds_pass + ' ' + collector_inet_ip + ' ' + collector_public_ip + ' ' + cloud_inet_ip + ' ' + cloud_public_ip + ' ' + cloud_key + ' ' + auu_key + ' ' + dfg_key + ' ' + baidu_ak + ' ' + baidu_serviceid + ' ' + ptname + ' ' + aesencode)
         return redirect("/userinfo")
+
